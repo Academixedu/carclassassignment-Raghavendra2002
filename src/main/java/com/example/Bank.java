@@ -10,6 +10,7 @@ public class Bank {
 
     // Add a constructor here
     // public Bank(String bankName, String accountHolderName, String accountNumber, double balance) { ... }
+    
 
     // Add getter and setter methods here
     // public String getBankName() { ... }
@@ -20,19 +21,77 @@ public class Bank {
     // public void setAccountNumber(String accountNumber) { ... }
     // public double getBalance() { ... }
     // public void setBalance(double balance) { ... }
+    public Bank(String bankName, String accountHolderName, String accountNumber, double balance) {
+        this.bankName = bankName;
+        this.accountHolderName = accountHolderName;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+    public String getBankName() {
+        return bankName;
+    }
+
+
+
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+
+
+    public double getBalance() {
+        return balance;
+    }
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+
+
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
+
+
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
     // Method to display account details
     public void displayAccountDetails() {
         // TODO: Implement this method
+
+        System.out.println(getBankName());
+        System.out.println(getAccountHolderName());
+        System.out.println(getAccountNumber());
+        System.out.println(getBalance());
+
     }
 
     // Method to deposit money
     public void deposit(double amount) {
         // TODO: Implement this method
+
+        setBalance(getBalance()+amount);
     }
 
     // Method to withdraw money
     public void withdraw(double amount) {
-        // TODO: Implement this method
+        setBalance(getBalance()-amount);
+        
+
     }
 }
